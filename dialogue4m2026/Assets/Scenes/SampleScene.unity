@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 1847052703}
   - component: {fileID: 1847052702}
   - component: {fileID: 1847052704}
+  - component: {fileID: 1847052705}
   m_Layer: 0
   m_Name: Bola
   m_TagString: Untagged
@@ -1226,6 +1227,18 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1847052705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847052697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3713ed659a1a875408786c8df1c8d7e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameplayStart
 --- !u!1 &2038722204
 GameObject:
   m_ObjectHideFlags: 0
