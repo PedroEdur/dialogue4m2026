@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
 
     public GameState currentState;
 
-    private void Awake()
+    void Awake()
     {
         // Singleton
         if (Instance == null)
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    void Start()
     {
         ChangeState(GameState.Iniciando);
         LoadScene("Splash");
@@ -45,19 +45,33 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    // Chamado pelo botão "Jogar"
+    // BOTÃO JOGAR
     public void StartGame()
     {
+        Debug.Log("Clicou em Jogar");
+
         if (currentState == GameState.MenuPrincipal)
         {
             ChangeState(GameState.Gameplay);
             LoadScene("SampleScene");
         }
+        else
+        {
+            Debug.Log("Não está no Menu, não pode iniciar");
+        }
     }
 
-    // Chamado pelo botão "Sair"
+    // BOTÃO SAIR
     public void QuitGame()
     {
+        Debug.Log("Clicou em Sair");
         Application.Quit();
+    }
+
+    // PARA O SPLASH CHAMAR
+    public void GoToMenu()
+    {
+        ChangeState(GameState.MenuPrincipal);
+        LoadScene("MenuPrincipal");
     }
 }

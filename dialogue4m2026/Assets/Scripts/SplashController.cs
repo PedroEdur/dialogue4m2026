@@ -5,14 +5,13 @@ public class SplashController : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(WaitAndLoad());
+        StartCoroutine(LoadMenu());
     }
 
-    IEnumerator WaitAndLoad()
+    IEnumerator LoadMenu()
     {
         yield return new WaitForSeconds(2f);
 
-        GameManager.Instance.ChangeState(GameManager.GameState.MenuPrincipal);
-        GameManager.Instance.LoadScene("MenuPrincipal");
+        GameManager.Instance.GoToMenu();
     }
 }
