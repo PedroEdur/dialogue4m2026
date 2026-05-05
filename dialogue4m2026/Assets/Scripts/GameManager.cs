@@ -1,22 +1,15 @@
-using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
 
-    public enum GameState
-    {
-        Iniciando,
-        MenuPrincipal,
-        Gameplay
-    }
-
-    public GameState currentState;
+    public GameState estadoAtual;
+    internal static object instance;
 
     void Awake()
     {
-        // Singleton
         if (Instance == null)
         {
             Instance = this;
@@ -30,48 +23,37 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        ChangeState(GameState.Iniciando);
-        LoadScene("Splash");
+        TrocarEstado(GameState.Iniciando);
+        CarregarSplash();
     }
 
-    public void ChangeState(GameState newState)
+    public enum GameState
     {
-        currentState = newState;
-        Debug.Log("Estado atual: " + currentState);
+        Iniciando,
+        MenuPrincipal,
+        Gameplay
     }
 
-    public void LoadScene(string sceneName)
+    public void TrocarEstado(GameState novoEstado)
     {
-        SceneManager.LoadScene(sceneName);
+        estadoAtual = novoEstado;
+        Debug.Log("Estado mudou para: " + estadoAtual);
     }
 
-    // BOTÃO JOGAR
-    public void StartGame()
+    public void CarregarSplash()
     {
-        Debug.Log("Clicou em Jogar");
-
-        if (currentState == GameState.MenuPrincipal)
-        {
-            ChangeState(GameState.Gameplay);
-            LoadScene("SampleScene");
-        }
-        else
-        {
-            Debug.Log("Não está no Menu, não pode iniciar");
-        }
+        SceneManager.LoadScene("Splash");
     }
 
-    // BOTÃO SAIR
-    public void QuitGame()
+    public void IrParaMenuPrincipal()
     {
-        Debug.Log("Clicou em Sair");
-        Application.Quit();
+        TrocarEstado(GameState.MenuPrincipal);
+        SceneManager.LoadScene("MenuPrincipal"); 
     }
 
-    // PARA O SPLASH CHAMAR
-    public void GoToMenu()
+    public void IniciarJogo()
     {
-        ChangeState(GameState.MenuPrincipal);
-        LoadScene("MenuPrincipal");
+        TrocarEstado(GameState.Gameplay);
+        SceneManager.LoadScene("SampleScene");
     }
 }
