@@ -1054,8 +1054,9 @@ GameObject:
   - component: {fileID: 1847052702}
   - component: {fileID: 1847052704}
   - component: {fileID: 1847052705}
+  - component: {fileID: 1847052706}
   m_Layer: 0
-  m_Name: Bola
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,6 +1240,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3713ed659a1a875408786c8df1c8d7e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameplayStart
+--- !u!114 &1847052706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847052697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8634410f9b8ff7041ad22d3f2e95936f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCoinCollector
 --- !u!1 &1890738977
 GameObject:
   m_ObjectHideFlags: 0
