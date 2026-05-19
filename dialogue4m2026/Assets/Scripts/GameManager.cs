@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
     public void IrParaMenuPrincipal()
     {
         TrocarEstado(GameState.MenuPrincipal);
-        SceneManager.LoadScene("MenuPrincipal"); 
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void IniciarJogo()
