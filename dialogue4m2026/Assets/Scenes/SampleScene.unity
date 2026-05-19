@@ -1056,7 +1056,7 @@ GameObject:
   - component: {fileID: 1847052705}
   m_Layer: 0
   m_Name: Bola
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1251,7 +1251,6 @@ GameObject:
   - component: {fileID: 1890738980}
   - component: {fileID: 1890738979}
   - component: {fileID: 1890738978}
-  - component: {fileID: 1890738982}
   m_Layer: 0
   m_Name: Moeda
   m_TagString: Untagged
@@ -1354,18 +1353,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1890738982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1890738977}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16c5ead7fc029240ada72ca51501c2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Coin
 --- !u!1 &2038722204
 GameObject:
   m_ObjectHideFlags: 0
