@@ -1252,8 +1252,8 @@ GameObject:
   - component: {fileID: 1890738979}
   - component: {fileID: 1890738978}
   m_Layer: 0
-  m_Name: Moeda
-  m_TagString: Untagged
+  m_Name: Coin
+  m_TagString: Coin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1278,9 +1278,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5000001
-  m_Height: 2
+  m_Height: 12.053644
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+  m_Center: {x: 0.000000047397812, y: -0.050402835, z: -0.00000009479563}
 --- !u!23 &1890738979
 MeshRenderer:
   m_ObjectHideFlags: 0
