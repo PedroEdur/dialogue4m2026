@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
         // Carrega gameplay
         SceneManager.LoadScene("SampleScene");
 
-        // Carrega GUI junto
-        SceneManager.LoadSceneAsync("GUI", LoadSceneMode.Additive);
+        // Carrega GUI de forma aditiva
+        SceneManager.LoadScene("GUI", LoadSceneMode.Additive);
 
         Debug.Log("Gameplay + GUI carregados");
     }
