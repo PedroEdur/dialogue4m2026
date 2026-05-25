@@ -54,6 +54,13 @@ public class GameManager : MonoBehaviour
     public void IniciarJogo()
     {
         TrocarEstado(GameState.Gameplay);
+
+        // Carrega gameplay
         SceneManager.LoadScene("SampleScene");
+
+        // Carrega GUI junto
+        SceneManager.LoadSceneAsync("GUI", LoadSceneMode.Additive);
+
+        Debug.Log("Gameplay + GUI carregados");
     }
 }
